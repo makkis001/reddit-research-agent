@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Reddit OT Security Conversation Intelligence — Preview</title>
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f6f8;color:#111827;line-height:1.45}.wrap{max-width:1180px;margin:0 auto;padding:34px 22px}header{background:#111827;color:#fff;border-radius:18px;padding:28px 30px}.muted{color:#6b7280}.meta{color:#cbd5e1}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 6px 20px rgba(15,23,42,.08)}.kpi{font-size:30px;font-weight:800}.pill{display:inline-block;background:#eef2ff;border-radius:999px;padding:5px 10px;margin:3px;font-size:12px}.flag{background:#fff7ed}.url{font-size:13px;word-break:break-all}.snippet{border-left:4px solid #111827;padding-left:12px;margin:12px 0}.score{font-weight:700}table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}th,td{text-align:left;border-bottom:1px solid #e5e7eb;padding:10px;vertical-align:top;font-size:14px}th{background:#111827;color:#fff}.section{margin-top:28px}a{color:#0f766e;text-decoration:none}@media(max-width:900px){.grid{grid-template-columns:1fr}table{font-size:12px}}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f6f8;color:#111827;line-height:1.45}.wrap{max-width:1180px;margin:0 auto;padding:34px 22px}header{background:#111827;color:#fff;border-radius:18px;padding:28px 30px}.meta{color:#cbd5e1}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 6px 20px rgba(15,23,42,.08)}.kpi{font-size:30px;font-weight:800}.badge{display:inline-block;border-radius:999px;padding:5px 10px;margin:3px;font-size:12px;background:#eef2ff}.vendor{background:#ecfeff}.topic{background:#f0fdf4}.risk{background:#fff7ed}.urlchip{background:#f3f4f6}.snippet{border-left:4px solid #111827;padding-left:12px;margin:12px 0}.score{font-weight:700}.section{margin-top:28px}a{color:#0f766e;text-decoration:none}.url-card{border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:14px 0;background:#fff}.url-card h3{margin:0 0 8px}.details{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}.small{font-size:13px;color:#4b5563}.takeaways li{margin-bottom:6px}table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}th,td{text-align:left;border-bottom:1px solid #e5e7eb;padding:10px;vertical-align:top;font-size:14px}th{background:#111827;color:#fff}@media(max-width:900px){.grid,.details{grid-template-columns:1fr}table{font-size:12px}}
   </style>
 </head>
 <body>
@@ -25,51 +25,97 @@
 <section class="card section">
   <h2>Conversation Preview</h2>
   <div class="snippet">
-    <h3>Claroty xDome: evaluation and deployment questions</h3>
-    <p>Thread appears focused on Claroty xDome as a standalone vendor discussion. Priority because it may reveal implementation friction, evaluation criteria, and buyer concerns before purchase.</p>
-    <p class="url"><a href="https://www.reddit.com/r/OTSecurity/comments/1kr5cae/dragos_vs_claroty_xdome/">reddit.com/r/OTSecurity/comments/1kr5cae/...</a></p>
+    <h3>🏷 Claroty xDome: evaluation and deployment questions</h3>
+    <p>Thread prioritized because it may expose how practitioners evaluate Claroty xDome, which deployment concerns appear before purchase, and whether Dragos is used as the comparison anchor.</p>
+    <span class="badge vendor">🏷 Vendor: Claroty</span><span class="badge topic">📌 Topic: OT visibility</span><span class="badge urlchip">🔗 URL selected</span>
   </div>
   <div class="snippet">
-    <h3>Dragos / Nozomi pricing: scarce pricing signal</h3>
-    <p>Pricing is explicit in the title, making this a high-priority thread. The report should extract cost objections, perceived value, and alternatives mentioned in comments.</p>
-    <p class="url"><a href="https://www.reddit.com/r/cybersecurity/comments/1m87wyb/dragos_nozomi_pricing/">reddit.com/r/cybersecurity/comments/1m87wyb/...</a></p>
-  </div>
-  <div class="snippet">
-    <h3>OT security tools: broad vendor shortlist discussion</h3>
-    <p>Mentions Armis, Claroty and Dragos together. Useful as secondary context for competitive set, but still routed under conversation intelligence rather than pure head-to-head analysis.</p>
-    <p class="url"><a href="https://www.reddit.com/r/cybersecurity/comments/1jd2p6t/anyone_use_armis_claroty_dragos_or_something_else/">reddit.com/r/cybersecurity/comments/1jd2p6t/...</a></p>
+    <h3>🏷 Dragos / Nozomi pricing: scarce pricing signal</h3>
+    <p>Explicit pricing thread. The full agent must summarize pricing objections, perceived value, and whether users frame either vendor as expensive, justified, or replaceable.</p>
+    <span class="badge vendor">🏷 Vendors: Dragos, Nozomi</span><span class="badge risk">💰 Pricing</span><span class="badge urlchip">🔗 URL selected</span>
   </div>
 </section>
 
 <section class="card section">
   <h2>Single Vendor Conversations</h2>
   <table>
-    <tr><th>Vendor</th><th>Threads</th><th>Dominant conversations</th><th>Preview</th><th>URLs</th></tr>
-    <tr><td>Claroty</td><td>3</td><td>xDome evaluation, OT visibility, deployment</td><td>Users appear to discuss Claroty in evaluation and implementation context. Check for product friction and differentiators.</td><td><a href="https://www.reddit.com/r/OTSecurity/comments/1kr5cae/dragos_vs_claroty_xdome/">Thread</a></td></tr>
-    <tr><td>Dragos</td><td>4</td><td>Pricing, platform comparison, OT monitoring</td><td>Dragos appears in multiple consideration-set threads. Pricing and platform value should be extracted from comments.</td><td><a href="https://www.reddit.com/r/cybersecurity/comments/1m87wyb/dragos_nozomi_pricing/">Pricing</a></td></tr>
-    <tr><td>Nozomi</td><td>1</td><td>Pricing, Guardian context</td><td>Nozomi appears in a pricing conversation; disambiguation required for Guardian/Vantage/Arc terms.</td><td><a href="https://www.reddit.com/r/cybersecurity/comments/1m87wyb/dragos_nozomi_pricing/">Thread</a></td></tr>
+    <tr><th>Vendor</th><th>Threads</th><th>Dominant conversations</th><th>Main takeaway</th><th>URLs</th></tr>
+    <tr><td>🏷 Claroty</td><td>3</td><td>xDome evaluation, OT visibility, deployment</td><td>Claroty should be read mainly through implementation and asset visibility conversations, not only direct comparisons.</td><td>🔗 <a href="https://www.reddit.com/r/OTSecurity/comments/1kr5cae/dragos_vs_claroty_xdome/">Open</a></td></tr>
+    <tr><td>🏷 Dragos</td><td>4</td><td>Pricing, platform comparison, OT monitoring</td><td>Dragos appears in consideration-set threads; extract value justification, pricing pressure, and alternatives.</td><td>🔗 <a href="https://www.reddit.com/r/cybersecurity/comments/1m87wyb/dragos_nozomi_pricing/">Open</a></td></tr>
   </table>
 </section>
 
 <section class="card section">
   <h2>Topic Conversations</h2>
   <table>
-    <tr><th>Topic</th><th>Threads</th><th>Conversation summary</th><th>Vendors mentioned</th><th>Sample URLs</th></tr>
-    <tr><td>OT visibility</td><td>5</td><td>Asset inventory and discovery are expected to be recurring pain points. Prioritize comments mentioning incomplete visibility or deployment gaps.</td><td>Claroty, Nozomi, Dragos</td><td>To be filled after search</td></tr>
-    <tr><td>OT security tools</td><td>4</td><td>Users compare tool categories and ask for recommendations. Strong buying-signal area.</td><td>Armis, Claroty, Dragos</td><td><a href="https://www.reddit.com/r/cybersecurity/comments/1jd2p6t/anyone_use_armis_claroty_dragos_or_something_else/">Thread</a></td></tr>
-    <tr><td>OT vulnerability management</td><td>2</td><td>Track whether conversations are about vulnerability prioritization, patch constraints, or ICS exposure management.</td><td>Claroty, Armis</td><td>To be filled after search</td></tr>
+    <tr><th>Topic</th><th>Threads</th><th>Conversation summary</th><th>Vendors mentioned</th><th>URLs</th></tr>
+    <tr><td>📌 OT visibility</td><td>5</td><td>Asset inventory and discovery are likely recurring pain points. The final report must extract concrete user problems, not just mention counts.</td><td>Claroty, Nozomi, Dragos</td><td>🔗 To be filled</td></tr>
+    <tr><td>📌 OT security tools</td><td>4</td><td>Recommendation and shortlist conversations indicate buying intent and category confusion.</td><td>Armis, Claroty, Dragos</td><td>🔗 <a href="https://www.reddit.com/r/cybersecurity/comments/1jd2p6t/anyone_use_armis_claroty_dragos_or_something_else/">Open</a></td></tr>
   </table>
 </section>
 
 <section class="card section">
-  <h2>Selected URLs</h2>
-  <table>
-    <tr><th>Rank</th><th>Title</th><th>Conversation type</th><th>Snippet preview</th><th>Score</th><th>URL</th></tr>
-    <tr><td>1</td><td>Dragos/Nozomi pricing</td><td>Vendor + pricing</td><td>Explicit pricing thread. High-value because pricing intel is rare and usually found in comments.</td><td class="score">95</td><td><a href="https://www.reddit.com/r/cybersecurity/comments/1m87wyb/dragos_nozomi_pricing/">Open</a></td></tr>
-    <tr><td>2</td><td>Anyone use Armis, Claroty, Dragos...</td><td>Multi-vendor shortlist</td><td>Likely active evaluation thread. Useful for understanding buyer criteria and perceived alternatives.</td><td class="score">88</td><td><a href="https://www.reddit.com/r/cybersecurity/comments/1jd2p6t/anyone_use_armis_claroty_dragos_or_something_else/">Open</a></td></tr>
-    <tr><td>3</td><td>Dragos vs Claroty xDome</td><td>Vendor comparison</td><td>Direct comparison, but also useful for Claroty xDome standalone signals and Dragos differentiation.</td><td class="score">86</td><td><a href="https://www.reddit.com/r/OTSecurity/comments/1kr5cae/dragos_vs_claroty_xdome/">Open</a></td></tr>
-    <tr><td>4</td><td>Worst security product...</td><td>Category complaint</td><td>Reputational risk scan. Deep fetch only if tracked vendors appear in post or high-score comments.</td><td class="score">72</td><td><a href="https://www.reddit.com/r/cybersecurity/comments/1lmdxx0/what_was_the_worst_security_product_your_worked/">Open</a></td></tr>
-  </table>
+  <h2>Detailed URL Analysis</h2>
+
+  <article class="url-card">
+    <h3>🔗 Dragos/Nozomi pricing</h3>
+    <p class="small">r/cybersecurity · Conversation type: vendor + pricing · Score: <span class="score">95</span></p>
+    <div class="details">
+      <div>
+        <p><strong>Post summary:</strong> Pricing-focused thread comparing Dragos and Nozomi. This is high-value because direct pricing discussions are rare and usually reveal real buying objections in the comments.</p>
+        <p><strong>Main takeaway:</strong> Treat this as a pricing pressure signal. The final fetch should identify whether users see pricing as a blocker, whether value is justified, and what alternatives are mentioned.</p>
+      </div>
+      <div>
+        <p><span class="badge vendor">🏷 Dragos</span><span class="badge vendor">🏷 Nozomi</span><span class="badge risk">💰 Pricing</span></p>
+        <ul class="takeaways">
+          <li>Extract quoted price ranges if present.</li>
+          <li>Separate first-hand buyer comments from hearsay.</li>
+          <li>Capture replacement or shortlist alternatives.</li>
+        </ul>
+        <p>🔗 <a href="https://www.reddit.com/r/cybersecurity/comments/1m87wyb/dragos_nozomi_pricing/">Open Reddit URL</a></p>
+      </div>
+    </div>
+  </article>
+
+  <article class="url-card">
+    <h3>🔗 Anyone use Armis, Claroty, Dragos or something else?</h3>
+    <p class="small">r/cybersecurity · Conversation type: multi-vendor shortlist · Score: <span class="score">88</span></p>
+    <div class="details">
+      <div>
+        <p><strong>Post summary:</strong> Broad evaluation thread asking about OT/security platforms. Useful for understanding how practitioners build a shortlist and what criteria they use.</p>
+        <p><strong>Main takeaway:</strong> This should feed both the topic view and vendor rollup. The agent must identify decision criteria: visibility, deployment effort, coverage, support, pricing, and alternatives.</p>
+      </div>
+      <div>
+        <p><span class="badge vendor">🏷 Armis</span><span class="badge vendor">🏷 Claroty</span><span class="badge vendor">🏷 Dragos</span><span class="badge topic">📌 OT security tools</span></p>
+        <ul class="takeaways">
+          <li>Classify buyer stage: researching/evaluating.</li>
+          <li>Extract pros/cons by vendor.</li>
+          <li>Identify unknown vendors proposed in comments.</li>
+        </ul>
+        <p>🔗 <a href="https://www.reddit.com/r/cybersecurity/comments/1jd2p6t/anyone_use_armis_claroty_dragos_or_something_else/">Open Reddit URL</a></p>
+      </div>
+    </div>
+  </article>
+
+  <article class="url-card">
+    <h3>🔗 Dragos vs Claroty xDome</h3>
+    <p class="small">r/OTSecurity · Conversation type: vendor comparison + single-vendor signal · Score: <span class="score">86</span></p>
+    <div class="details">
+      <div>
+        <p><strong>Post summary:</strong> Direct comparison between Dragos and Claroty xDome. Although it is a comparison, it should also be analyzed as a Claroty xDome conversation.</p>
+        <p><strong>Main takeaway:</strong> Look for practical comments on detection quality, asset visibility, deployment complexity, and why users prefer one platform over the other.</p>
+      </div>
+      <div>
+        <p><span class="badge vendor">🏷 Dragos</span><span class="badge vendor">🏷 Claroty</span><span class="badge topic">📌 OT monitoring</span></p>
+        <ul class="takeaways">
+          <li>Split findings into Dragos-specific and Claroty-specific notes.</li>
+          <li>Capture direct win/loss language.</li>
+          <li>Identify implementation objections.</li>
+        </ul>
+        <p>🔗 <a href="https://www.reddit.com/r/OTSecurity/comments/1kr5cae/dragos_vs_claroty_xdome/">Open Reddit URL</a></p>
+      </div>
+    </div>
+  </article>
 </section>
 </main>
 </body>
