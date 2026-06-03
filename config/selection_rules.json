@@ -1,0 +1,68 @@
+{
+  "objective": "Select Reddit URLs worth deep-fetching before downloading full post/comment content.",
+  "scope": "OT security competitive intelligence, voice of customer, buying signals, pricing, complaints, comparisons.",
+  "minimumScoreForDeepFetch": 60,
+  "maxSelectedUrls": 25,
+  "scoring": {
+    "vendorMention": 25,
+    "trackedTopicMention": 20,
+    "comparisonSignal": 20,
+    "pricingSignal": 20,
+    "buyingSignal": 20,
+    "complaintSignal": 15,
+    "relevantSubreddit": 10,
+    "commentVolume": 10,
+    "recentPost": 5
+  },
+  "positiveSignals": [
+    "pricing",
+    "cost",
+    "vs",
+    "compare",
+    "comparison",
+    "alternative",
+    "recommendation",
+    "shortlist",
+    "anyone use",
+    "experience with",
+    "worst product",
+    "problem",
+    "issue",
+    "leaving",
+    "switching",
+    "evaluation",
+    "POC",
+    "implementation"
+  ],
+  "negativeSignals": [
+    "job posting",
+    "certification only",
+    "training course",
+    "press release",
+    "stock market",
+    "unrelated guardian",
+    "unrelated arc",
+    "generic security news without vendor/topic angle"
+  ],
+  "vendorDisambiguation": {
+    "Guardian": "Keep only when context mentions Nozomi, OT, ICS, security platform, asset visibility, or industrial cybersecurity.",
+    "Vantage": "Keep only when context mentions Nozomi, OT, ICS, security platform, asset visibility, or industrial cybersecurity.",
+    "Arc": "Keep only when context mentions Nozomi, OT, ICS, security platform, asset visibility, or industrial cybersecurity.",
+    "CTD": "Keep only when context mentions Claroty, Continuous Threat Detection, OT, ICS, or cybersecurity.",
+    "Centrix": "Keep only when context mentions Armis, exposure management, OT, IoT, or cybersecurity."
+  },
+  "outputFields": [
+    "url",
+    "subreddit",
+    "title",
+    "score",
+    "decision",
+    "reason",
+    "vendorsMentioned",
+    "topicsMentioned",
+    "signals",
+    "pricingMentioned",
+    "buyerStage",
+    "commentCount"
+  ]
+}
