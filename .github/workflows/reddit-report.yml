@@ -1,0 +1,26 @@
+name: Reddit Research Report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8 */15 * *'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm install
+
+      - name: Run agent
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: npm run run
