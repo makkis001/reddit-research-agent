@@ -1,6 +1,12 @@
 {
   "scope": "all_reddit_with_subreddit_ranking",
-  "searchStrategy": "Search across all Reddit first, then rank and filter candidates by subreddit relevance, vendor/topic match, and signal strength.",
+  "searchStrategy": "Search across all Reddit first, then rank and filter candidates by subreddit relevance, vendor/topic match, signal strength, and date. Exclude anything before 2025.",
+  "dateFilter": {
+    "from": "2025-01-01",
+    "to": "present",
+    "excludeBefore": "2025-01-01",
+    "strict": true
+  },
   "seedSubreddits": [
     "cybersecurity",
     "OTSecurity",
@@ -16,12 +22,14 @@
     "doNotExcludeOtherSubreddits": true,
     "penalizeLowContextGenericSubreddits": true,
     "preferThreadsWithComments": true,
-    "preferVendorComparisonAndBuyerIntent": true
+    "preferVendorComparisonAndBuyerIntent": true,
+    "excludePostsBefore2025": true
   },
   "candidatePolicy": {
     "targetCandidates": 100,
     "maxSelectedForDeepFetch": 20,
     "allowAllRedditDiscovery": true,
-    "requireMetadataBeforeDeepFetch": true
+    "requireMetadataBeforeDeepFetch": true,
+    "requireDateFrom2025Onward": true
   }
 }
