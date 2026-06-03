@@ -1,4 +1,18 @@
 {
+  "vendors": {
+    "Dragos": ["Dragos", "Dragos Inc", "Dragos Platform", "Dragos OT"],
+    "Nozomi": ["Nozomi", "Nozomi Networks", "Nozomi Guardian", "Nozomi Vantage", "Nozomi Arc", "Guardian", "Vantage", "Arc"],
+    "Claroty": ["Claroty", "Claroty xDome", "xDome", "x-dome", "Claroty CTD", "CTD", "Continuous Threat Detection", "Team82", "Medigate"],
+    "Armis": ["Armis", "Armis Security", "Armis Centrix", "Centrix"]
+  },
+  "topics": {
+    "OT monitoring": ["OT monitoring", "OT security monitoring", "OT network monitoring"],
+    "OT security": ["OT security", "operational technology security", "OT cybersecurity"],
+    "OT vulnerability management": ["OT vulnerability management", "OT vuln management", "ICS vulnerability"],
+    "OT segmentation": ["OT segmentation", "OT network segmentation", "microsegmentation OT"],
+    "OT security tools": ["OT security tools", "OT security platform", "OT security solution"],
+    "OT visibility": ["OT visibility", "OT asset visibility", "OT asset inventory", "OT asset discovery"]
+  },
   "groups": [
     {
       "type": "vendor",
