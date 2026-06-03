@@ -1,12 +1,59 @@
 {
-  "keywords": [
-    "example keyword 1",
-    "example keyword 2",
-    "example keyword 3"
+  "groups": [
+    {
+      "type": "vendor",
+      "name": "Dragos",
+      "terms": ["Dragos", "Dragos Inc", "Dragos Platform", "Dragos OT"]
+    },
+    {
+      "type": "vendor",
+      "name": "Nozomi",
+      "terms": ["Nozomi", "Nozomi Networks", "Nozomi Guardian", "Nozomi Vantage", "Nozomi Arc", "Guardian", "Vantage", "Arc"]
+    },
+    {
+      "type": "vendor",
+      "name": "Claroty",
+      "terms": ["Claroty", "Claroty xDome", "xDome", "x-dome", "Claroty CTD", "CTD", "Continuous Threat Detection", "Team82", "Medigate"]
+    },
+    {
+      "type": "vendor",
+      "name": "Armis",
+      "terms": ["Armis", "Armis Security", "Armis Centrix", "Centrix"]
+    },
+    {
+      "type": "topic",
+      "name": "OT monitoring",
+      "terms": ["OT monitoring", "OT security monitoring", "OT network monitoring"]
+    },
+    {
+      "type": "topic",
+      "name": "OT security",
+      "terms": ["OT security", "operational technology security", "OT cybersecurity"]
+    },
+    {
+      "type": "topic",
+      "name": "OT vulnerability management",
+      "terms": ["OT vulnerability management", "OT vuln management", "ICS vulnerability"]
+    },
+    {
+      "type": "topic",
+      "name": "OT segmentation",
+      "terms": ["OT segmentation", "OT network segmentation", "microsegmentation OT"]
+    },
+    {
+      "type": "topic",
+      "name": "OT security tools",
+      "terms": ["OT security tools", "OT security platform", "OT security solution"]
+    },
+    {
+      "type": "topic",
+      "name": "OT visibility",
+      "terms": ["OT visibility", "OT asset visibility", "OT asset inventory", "OT asset discovery"]
+    }
   ],
-  "maxPostsPerKeyword": 20,
-  "maxSelectedPosts": 10,
+  "maxPostsPerTerm": 20,
+  "maxSelectedPosts": 25,
   "maxCommentsPerPost": 100,
   "language": "it",
-  "reportTitle": "Reddit Research Report"
+  "reportTitle": "Reddit OT Security Competitive Intelligence Report"
 }
