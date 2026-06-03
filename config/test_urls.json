@@ -1,0 +1,39 @@
+{
+  "mode": "test",
+  "requestedUrlCount": 20,
+  "providedUrlCount": 4,
+  "urls": [
+    {
+      "url": "https://www.reddit.com/r/cybersecurity/comments/1m87wyb/dragos_nozomi_pricing/",
+      "subreddit": "cybersecurity",
+      "id": "1m87wyb",
+      "expectedSignals": ["pricing", "comparison"],
+      "vendorsMentioned": ["Dragos", "Nozomi"],
+      "priority": "high"
+    },
+    {
+      "url": "https://www.reddit.com/r/cybersecurity/comments/1jd2p6t/anyone_use_armis_claroty_dragos_or_something_else/",
+      "subreddit": "cybersecurity",
+      "id": "1jd2p6t",
+      "expectedSignals": ["comparison", "usage"],
+      "vendorsMentioned": ["Armis", "Claroty", "Dragos"],
+      "priority": "high"
+    },
+    {
+      "url": "https://www.reddit.com/r/OTSecurity/comments/1kr5cae/dragos_vs_claroty_xdome/",
+      "subreddit": "OTSecurity",
+      "id": "1kr5cae",
+      "expectedSignals": ["comparison"],
+      "vendorsMentioned": ["Dragos", "Claroty"],
+      "priority": "high"
+    },
+    {
+      "url": "https://www.reddit.com/r/cybersecurity/comments/1lmdxx0/what_was_the_worst_security_product_your_worked/",
+      "subreddit": "cybersecurity",
+      "id": "1lmdxx0",
+      "expectedSignals": ["complaint", "reputational risk"],
+      "vendorsMentioned": [],
+      "priority": "medium"
+    }
+  ]
+}
