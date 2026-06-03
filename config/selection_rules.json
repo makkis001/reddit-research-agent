@@ -1,68 +1,55 @@
 {
-  "objective": "Select Reddit URLs worth deep-fetching before downloading full post/comment content.",
+  "objective": "Select Reddit URLs worth deep-fetching before downloading full post/comment content. Eliminate false positives upstream using metadata only.",
   "scope": "OT security competitive intelligence, voice of customer, buying signals, pricing, complaints, comparisons.",
-  "minimumScoreForDeepFetch": 60,
-  "maxSelectedUrls": 25,
+  "minimumScoreForDeepFetch": 70,
+  "maxSelectedUrls": 20,
+  "deepFetchPolicy": {
+    "mode": "post_plus_top_comments",
+    "maxCommentsPerPost": 100,
+    "commentSort": "score",
+    "runOnlyAfterPrefilter": true
+  },
+  "hardFilters": {
+    "excludeBeforeDate": "2025-01-01",
+    "requireAtLeastOneTrackedVendorOrTrackedTopic": true,
+    "requireSecurityOrOTContextForAmbiguousTerms": true,
+    "excludeIfOnlyAmbiguousTermWithoutContext": true,
+    "excludeGenericNewsWithoutDecisionSignal": true
+  },
   "scoring": {
     "vendorMention": 25,
     "trackedTopicMention": 20,
-    "comparisonSignal": 20,
-    "pricingSignal": 20,
-    "buyingSignal": 20,
-    "complaintSignal": 15,
+    "comparisonSignal": 25,
+    "pricingSignal": 25,
+    "buyingSignal": 25,
+    "complaintSignal": 20,
     "relevantSubreddit": 10,
     "commentVolume": 10,
     "recentPost": 5
   },
   "positiveSignals": [
-    "pricing",
-    "cost",
-    "vs",
-    "compare",
-    "comparison",
-    "alternative",
-    "recommendation",
-    "shortlist",
-    "anyone use",
-    "experience with",
-    "worst product",
-    "problem",
-    "issue",
-    "leaving",
-    "switching",
-    "evaluation",
-    "POC",
-    "implementation"
+    "pricing", "cost", "license", "quote", "budget", "expensive",
+    "vs", "compare", "comparison", "alternative", "replacement",
+    "recommendation", "shortlist", "which one", "anyone use", "experience with",
+    "worst product", "problem", "issue", "leaving", "switching",
+    "evaluation", "POC", "pilot", "implementation", "deployment"
   ],
   "negativeSignals": [
-    "job posting",
-    "certification only",
-    "training course",
-    "press release",
-    "stock market",
-    "unrelated guardian",
-    "unrelated arc",
-    "generic security news without vendor/topic angle"
+    "job posting", "hiring", "certification only", "training course",
+    "press release", "stock market", "earnings", "generic security news",
+    "unrelated guardian", "unrelated vantage", "unrelated arc", "unrelated CTD",
+    "movie", "game", "anime", "travel", "consumer app"
   ],
   "vendorDisambiguation": {
-    "Guardian": "Keep only when context mentions Nozomi, OT, ICS, security platform, asset visibility, or industrial cybersecurity.",
-    "Vantage": "Keep only when context mentions Nozomi, OT, ICS, security platform, asset visibility, or industrial cybersecurity.",
-    "Arc": "Keep only when context mentions Nozomi, OT, ICS, security platform, asset visibility, or industrial cybersecurity.",
-    "CTD": "Keep only when context mentions Claroty, Continuous Threat Detection, OT, ICS, or cybersecurity.",
-    "Centrix": "Keep only when context mentions Armis, exposure management, OT, IoT, or cybersecurity."
+    "Guardian": "Reject unless context mentions Nozomi, OT, ICS, security platform, asset visibility, industrial cybersecurity, or Nozomi Networks.",
+    "Vantage": "Reject unless context mentions Nozomi, OT, ICS, security platform, asset visibility, industrial cybersecurity, or Nozomi Networks.",
+    "Arc": "Reject unless context mentions Nozomi, OT, ICS, security platform, asset visibility, industrial cybersecurity, or Nozomi Networks.",
+    "CTD": "Reject unless context mentions Claroty, Continuous Threat Detection, OT, ICS, or cybersecurity.",
+    "Centrix": "Reject unless context mentions Armis, exposure management, OT, IoT, or cybersecurity."
   },
   "outputFields": [
-    "url",
-    "subreddit",
-    "title",
-    "score",
-    "decision",
-    "reason",
-    "vendorsMentioned",
-    "topicsMentioned",
-    "signals",
-    "pricingMentioned",
-    "buyerStage",
-    "commentCount"
+    "url", "subreddit", "title", "date", "score", "decision", "reason",
+    "vendorsMentioned", "topicsMentioned", "signals", "falsePositiveRisk",
+    "pricingMentioned", "buyerStage", "commentCount"
   ]
 }
