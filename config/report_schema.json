@@ -1,77 +1,72 @@
 {
-  "reportName": "Reddit OT Security Competitive Intelligence Report",
+  "reportName": "Reddit OT Security Conversation Intelligence Report",
   "language": "it",
   "dateScope": "2025 onward only",
+  "primaryFocus": ["single_vendor_conversations", "topic_conversations"],
+  "secondaryFocus": ["competitive_pairings"],
   "layout": [
     {
-      "section": "snippet_preview",
-      "description": "Top-of-report preview: 5-7 bullet insights generated before the full tables.",
-      "fields": ["headline", "why_it_matters", "evidence_urls", "confidence"]
+      "section": "conversation_preview",
+      "description": "Top preview with the most important single-vendor and topic conversations.",
+      "fields": ["headline", "conversation_type", "vendor_or_topic", "snippet_preview", "why_it_matters", "evidence_urls", "confidence"]
     },
     {
       "section": "executive_summary",
-      "description": "Short summary for management: what changed, strongest signals, vendor implications."
+      "description": "Short management summary focused on what people are discussing, not only vendor comparisons."
+    },
+    {
+      "section": "single_vendor_conversations",
+      "description": "Main section. Threads focused mainly on one vendor.",
+      "columns": [
+        "vendor", "thread_count", "dominant_conversations", "sentiment", "buyer_stage",
+        "pricing_mentions", "complaints", "implementation_topics", "representative_snippets", "sample_urls"
+      ]
+    },
+    {
+      "section": "topic_conversations",
+      "description": "Main section. Threads focused on OT security topics, with or without vendor mentions.",
+      "columns": [
+        "topic", "thread_count", "conversation_summary", "vendors_mentioned", "pain_points",
+        "buyer_signals", "representative_snippets", "sample_urls"
+      ]
     },
     {
       "section": "vendor_rollup",
-      "description": "Vendor-level summary including both standalone vendor threads and competitive threads.",
-      "columns": [
-        "vendor", "mentions", "standalone_threads", "comparison_threads", "pricing_threads",
-        "buyer_signal_threads", "complaint_threads", "sentiment", "key_takeaway"
-      ]
-    },
-    {
-      "section": "single_vendor_threads",
-      "description": "Threads focused mainly on one vendor, e.g. Claroty-only, Dragos-only, Nozomi-only, Armis-only.",
-      "columns": [
-        "vendor", "thread_count", "dominant_topics", "sentiment", "buyer_stage", "sample_snippets", "sample_urls"
-      ]
+      "description": "Compact vendor-level summary.",
+      "columns": ["vendor", "mentions", "standalone_threads", "topic_threads", "sentiment", "key_takeaway"]
     },
     {
       "section": "competitive_pairings",
-      "description": "Which vendors are mentioned together.",
+      "description": "Secondary section for direct vendor comparisons only.",
       "columns": ["pairing", "thread_count", "dominant_context", "sample_urls"]
     },
     {
-      "section": "themes",
-      "description": "Main topics found across selected Reddit discussions.",
-      "columns": ["theme", "count", "vendors_involved", "example_snippet", "sample_urls"]
-    },
-    {
       "section": "selected_urls_table",
-      "description": "Main URL table with preview snippets.",
+      "description": "Main URL table with snippet previews.",
       "columns": [
-        "rank", "url", "subreddit", "title", "snippet_preview", "thread_focus",
-        "signal_type", "vendors_mentioned", "topic", "pricing", "buyer_stage",
-        "date", "comments", "selection_score", "reason_selected"
-      ]
-    },
-    {
-      "section": "flags",
-      "description": "High-priority items to inspect first.",
-      "flagTypes": [
-        "pricing_intel", "reputational_risk", "direct_vendor_comparison",
-        "single_vendor_complaint", "single_vendor_praise", "active_buyer_evaluation",
-        "migration_or_replacement_signal"
+        "rank", "url", "subreddit", "title", "snippet_preview", "conversation_type",
+        "vendor", "topic", "signal_type", "pricing", "buyer_stage", "date",
+        "comments", "selection_score", "reason_selected"
       ]
     },
     {
       "section": "appendix_rejected_candidates",
-      "description": "Optional table showing rejected false positives and why they were rejected.",
+      "description": "Rejected false positives and why they were rejected.",
       "columns": ["url", "title", "reason_rejected", "false_positive_risk"]
     }
   ],
-  "threadFocusClassification": {
-    "single_vendor": "One tracked vendor is the main subject of the thread.",
-    "multi_vendor_comparison": "Two or more tracked vendors are compared or mentioned together.",
-    "topic_only": "No vendor focus, but strong OT security topic relevance.",
-    "category_complaint": "Broad complaint/risk thread that may mention tracked vendors in comments."
+  "conversationTypes": {
+    "single_vendor": "One tracked vendor is the main subject.",
+    "topic_only": "A tracked OT security topic is the main subject, even without vendor mention.",
+    "vendor_plus_topic": "One vendor is discussed in relation to one tracked topic.",
+    "multi_vendor_comparison": "Two or more tracked vendors are compared; secondary priority.",
+    "category_complaint": "Broad complaint/risk thread that may mention vendors in comments."
   },
   "snippetPreviewRules": {
     "maxLength": 280,
-    "mustExplainWhyRelevant": true,
-    "mustMentionSignal": true,
-    "mustMentionVendorIfDetected": true,
+    "mustExplainConversation": true,
+    "mustMentionWhyRelevant": true,
+    "mustMentionVendorOrTopic": true,
     "avoidGenericSummaries": true
   }
 }
