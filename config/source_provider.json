@@ -1,0 +1,20 @@
+{
+  "searchProvider": "apify_reddit_search",
+  "reason": "Use Apify Reddit Search for metadata-first candidate discovery before deep-fetching full posts and comments.",
+  "pipeline": [
+    "search_candidates",
+    "prefilter_metadata",
+    "select_urls",
+    "deep_fetch_selected_urls",
+    "analyze_content",
+    "publish_to_netlify"
+  ],
+  "prefilterBeforeDeepFetch": true,
+  "targetCandidateCount": 100,
+  "targetSelectedUrlCount": 20,
+  "notes": [
+    "Candidate search should return title, subreddit, URL, post ID, date, score/upvotes if available, comment count, and snippet if available.",
+    "Deep fetch must run only after metadata scoring eliminates false positives.",
+    "Ambiguous terms such as Guardian, Vantage, Arc, CTD, and Centrix require context disambiguation before selection."
+  ]
+}
