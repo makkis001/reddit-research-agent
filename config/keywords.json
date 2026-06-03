@@ -1,0 +1,12 @@
+{
+  "keywords": [
+    "example keyword 1",
+    "example keyword 2",
+    "example keyword 3"
+  ],
+  "maxPostsPerKeyword": 20,
+  "maxSelectedPosts": 10,
+  "maxCommentsPerPost": 100,
+  "language": "it",
+  "reportTitle": "Reddit Research Report"
+}
