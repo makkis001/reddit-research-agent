@@ -1,0 +1,27 @@
+{
+  "scope": "all_reddit_with_subreddit_ranking",
+  "searchStrategy": "Search across all Reddit first, then rank and filter candidates by subreddit relevance, vendor/topic match, and signal strength.",
+  "seedSubreddits": [
+    "cybersecurity",
+    "OTSecurity",
+    "industrialcybersecurity",
+    "sysadmin",
+    "netsec",
+    "AskNetsec",
+    "msp",
+    "blueteamsec"
+  ],
+  "rankingRules": {
+    "boostSeedSubreddits": true,
+    "doNotExcludeOtherSubreddits": true,
+    "penalizeLowContextGenericSubreddits": true,
+    "preferThreadsWithComments": true,
+    "preferVendorComparisonAndBuyerIntent": true
+  },
+  "candidatePolicy": {
+    "targetCandidates": 100,
+    "maxSelectedForDeepFetch": 20,
+    "allowAllRedditDiscovery": true,
+    "requireMetadataBeforeDeepFetch": true
+  }
+}
