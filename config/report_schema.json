@@ -6,12 +6,7 @@
     {
       "section": "snippet_preview",
       "description": "Top-of-report preview: 5-7 bullet insights generated before the full tables.",
-      "fields": [
-        "headline",
-        "why_it_matters",
-        "evidence_urls",
-        "confidence"
-      ]
+      "fields": ["headline", "why_it_matters", "evidence_urls", "confidence"]
     },
     {
       "section": "executive_summary",
@@ -19,81 +14,59 @@
     },
     {
       "section": "vendor_rollup",
-      "description": "Vendor-level summary.",
+      "description": "Vendor-level summary including both standalone vendor threads and competitive threads.",
       "columns": [
-        "vendor",
-        "mentions",
-        "sentiment",
-        "comparison_threads",
-        "pricing_threads",
-        "buyer_signal_threads",
-        "complaint_threads",
-        "key_takeaway"
+        "vendor", "mentions", "standalone_threads", "comparison_threads", "pricing_threads",
+        "buyer_signal_threads", "complaint_threads", "sentiment", "key_takeaway"
+      ]
+    },
+    {
+      "section": "single_vendor_threads",
+      "description": "Threads focused mainly on one vendor, e.g. Claroty-only, Dragos-only, Nozomi-only, Armis-only.",
+      "columns": [
+        "vendor", "thread_count", "dominant_topics", "sentiment", "buyer_stage", "sample_snippets", "sample_urls"
       ]
     },
     {
       "section": "competitive_pairings",
       "description": "Which vendors are mentioned together.",
-      "columns": [
-        "pairing",
-        "thread_count",
-        "dominant_context",
-        "sample_urls"
-      ]
+      "columns": ["pairing", "thread_count", "dominant_context", "sample_urls"]
     },
     {
       "section": "themes",
       "description": "Main topics found across selected Reddit discussions.",
-      "columns": [
-        "theme",
-        "count",
-        "vendors_involved",
-        "example_snippet",
-        "sample_urls"
-      ]
+      "columns": ["theme", "count", "vendors_involved", "example_snippet", "sample_urls"]
     },
     {
       "section": "selected_urls_table",
       "description": "Main URL table with preview snippets.",
       "columns": [
-        "rank",
-        "url",
-        "subreddit",
-        "title",
-        "snippet_preview",
-        "signal_type",
-        "vendors_mentioned",
-        "topic",
-        "pricing",
-        "buyer_stage",
-        "date",
-        "comments",
-        "selection_score",
-        "reason_selected"
+        "rank", "url", "subreddit", "title", "snippet_preview", "thread_focus",
+        "signal_type", "vendors_mentioned", "topic", "pricing", "buyer_stage",
+        "date", "comments", "selection_score", "reason_selected"
       ]
     },
     {
       "section": "flags",
       "description": "High-priority items to inspect first.",
       "flagTypes": [
-        "pricing_intel",
-        "reputational_risk",
-        "direct_vendor_comparison",
-        "active_buyer_evaluation",
+        "pricing_intel", "reputational_risk", "direct_vendor_comparison",
+        "single_vendor_complaint", "single_vendor_praise", "active_buyer_evaluation",
         "migration_or_replacement_signal"
       ]
     },
     {
       "section": "appendix_rejected_candidates",
       "description": "Optional table showing rejected false positives and why they were rejected.",
-      "columns": [
-        "url",
-        "title",
-        "reason_rejected",
-        "false_positive_risk"
-      ]
+      "columns": ["url", "title", "reason_rejected", "false_positive_risk"]
     }
   ],
+  "threadFocusClassification": {
+    "single_vendor": "One tracked vendor is the main subject of the thread.",
+    "multi_vendor_comparison": "Two or more tracked vendors are compared or mentioned together.",
+    "topic_only": "No vendor focus, but strong OT security topic relevance.",
+    "category_complaint": "Broad complaint/risk thread that may mention tracked vendors in comments."
+  },
   "snippetPreviewRules": {
     "maxLength": 280,
     "mustExplainWhyRelevant": true,
