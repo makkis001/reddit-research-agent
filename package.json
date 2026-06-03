@@ -1,0 +1,1 @@
+{"name":"reddit-research-agent","version":"0.1.0","type":"module","scripts":{"run":"node src/run.js"},"dependencies":{"@netlify/zip-it-and-ship-it":"latest"},"engines":{"node":">=20"}}
